@@ -8,6 +8,6 @@ OPTS="-fs"
 # escape removal.
 VIDS=`echo "$*" | sed "s/'/\\\\\'/g"`
 
-echo "xterm -e \"$PLAYER $OPTS $VIDS\"" > $TVPLAY_XINITRC
+echo "xterm -e \"$PLAYER $OPTS '$VIDS'\"" > $TVPLAY_XINITRC
 XINITRC=$TVPLAY_XINITRC xinit
 rm $TVPLAY_XINITRC
