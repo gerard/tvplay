@@ -14,6 +14,7 @@ while [ -n "$1" ]
 do
     COUNT=`expr $COUNT + 1`
     ln -s "$1"  $TMPDIR/$COUNT.avi
+    echo `date` "$1" >> ~/.tvplay.history
     VIDS="$VIDS $TMPDIR/$COUNT.avi"
     shift
 done
